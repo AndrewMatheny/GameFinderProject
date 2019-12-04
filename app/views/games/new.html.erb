@@ -4,5 +4,6 @@
     Developer : <%= f.text_field :developer %><br> 
     Release Date : <%= f.text_field :release_date %><br> 
     Game Genre <%= f.collection_check_boxes(:genre_ids, Genre.all, :id, :name) %><br>
+    
     <%= f.submit %>
 <% end %>
