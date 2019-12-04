@@ -1,6 +1,7 @@
 class ReviewsController < ApplicationController
     def show
-        find_review
+        @review = find_review
+        @game = @review.game
     end
 
     def new
