@@ -3,6 +3,7 @@
     User: <%= f.collection_select(:user_id, User.all, :id, :name) %><br><br>
     Game: <%= f.collection_select(:game_id, Game.all, :id, :name) %><br><br>
     Score : <%= f.number_field :score %> out of 10<br><br>
+    Review Snippet: <%= f.text_field :snippet %><br><br>
     Review Text: <%= f.text_area :text %><br><br>
     <%= f.submit %>
 <% end %>
