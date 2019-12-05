@@ -1,1 +1,11 @@
 <h1> <%= @game.name %> </h1>
+<h2> Developed by: <%= @game.developer %> </h2>
+<h3>Release date: <%= @game.release_date %> </h3>
+<ul>
+<% @reviews.each do |review| %>
+    <li>
+        <%= link_to review.text, review %>
+    </li>
+    <br>
+    <% end %>
+</ul>
