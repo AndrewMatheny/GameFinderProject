@@ -1,11 +1,13 @@
-<h1>All Reviews</h1>
+<div class="container text-center">
+<h2>All Reviews</h2>
 
 <ul>
 <% @reviews.each do |review| %>
-    <li>
-        <%= link_to review.snippet, review %><br>
-        <%= review.game.name %>
+    <li class="container text-center">
+        <%= review.game.name %> - Reviewed by <%= review.user.name %><br>
+        <%= link_to review.snippet, review %> Score: <%= review.score %>/10
     </li>
     <br>
     <% end %>
 </ul>
+</div>
