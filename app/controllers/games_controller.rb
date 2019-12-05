@@ -15,7 +15,12 @@ class GamesController < ApplicationController
 
     def create
         @game = Game.new(game_params)
-        @game.save
+        if @game.valid?
+            @game.save
+            redirect_to @game
+        else
+            render :new
+        end
         # ids = params[:game][:genre_ids]
 
         # clean_ids = ids.reject { |e| e.to_s.empty? }
@@ -26,7 +31,7 @@ class GamesController < ApplicationController
         #@gamegenre.save
 
         #byebug
-        redirect_to @game
+     
     end
 
     private

@@ -14,8 +14,12 @@ class ReviewsController < ApplicationController
 
     def create
         @review = Review.new(review_params)
-        @review.save
-        redirect_to @review
+        if @review.valid?
+            @review.save
+            redirect_to @review
+        else
+            render :new
+        end
     end
 
     def edit
@@ -23,9 +27,12 @@ class ReviewsController < ApplicationController
     end
 
     def update
-        @review = Review.update(review_params)
-        @review.save
-        redirect_to @review
+        find_review
+        if @review.update(review_params)
+            redirect_to @review
+        else
+            render :edit
+        end
     end
 
     private

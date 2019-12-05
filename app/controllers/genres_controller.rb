@@ -9,8 +9,12 @@ class GenresController < ApplicationController
 
     def create
         @genre = Genre.new(genre_params)
-        @genre.save
-        redirect_to new_game_path
+        if @genre.valid?
+            @genre.save
+            redirect_to new_game_path
+        else
+            render :new
+        end
     end
 
     private
