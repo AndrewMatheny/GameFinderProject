@@ -6,7 +6,7 @@
 <ul>
 <% @reviews.each do |review| %>
     <li>
-        <%= link_to review.text, review %><br>
+        <%= link_to review.snippet, review %><br>
         <%= review.score %>/10 <br>
         Review made: <%= review.created_at %> <br>
         User: <%= review.user.name %>

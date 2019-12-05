@@ -34,13 +34,13 @@ GameGenre.create(game_id: the_last_of_us.id, genre_id: action.id)
 GameGenre.create(game_id: the_last_of_us.id, genre_id: adventure.id)
 GameGenre.create(game_id: stardew_valley.id, genre_id: simulation.id)
 
-Review.create(score: 10, text: "A fantastic game!", user_id: drew.id, game_id: red_dead_redemption.id)
-Review.create(score: 8, text: "A great game", user_id: drew.id, game_id: stardew_valley.id)
-Review.create(score: 9, text: "Almost perfect", user_id: drew.id, game_id: fire_emblem_3_houses.id)
-Review.create(score: 10, text: "Perfect", user_id: drew.id, game_id: the_last_of_us.id)
-Review.create(score: 8, text: "Great!", user_id: drew.id, game_id: mass_effect_3.id)
+Review.create(score: 10, text: "A fantastic game!  I loved every minute of it!", user_id: drew.id, game_id: red_dead_redemption.id, snippet: "A fantastic game!")
+Review.create(score: 8, text: "This game was very good and nostalgic", user_id: drew.id, game_id: stardew_valley.id, snippet: "A great game")
+Review.create(score: 9, text: "Almost perfect.  Loved the game right until the end.", user_id: drew.id, game_id: fire_emblem_3_houses.id, snippet: "Almost perfect")
+Review.create(score: 10, text: "In my top 3 games of all time", user_id: drew.id, game_id: the_last_of_us.id, snippet: "Perfect!")
+Review.create(score: 8, text: "This game was great!", user_id: drew.id, game_id: mass_effect_3.id, snippet: "Great!")
 
-Review.create(score: 9, text: "Awesome!", user_id: glenn.id, game_id: red_dead_redemption.id)
+Review.create(score: 9, text: "I love cowboy games!", user_id: glenn.id, game_id: red_dead_redemption.id, snippet: "Awesome!")
 
 
 
