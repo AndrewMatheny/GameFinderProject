@@ -3,7 +3,8 @@
 <ul>
 <% @reviews.each do |review| %>
     <li>
-        <%= link_to review.snippet, review %>
+        <%= link_to review.snippet, review %><br>
+        <%= review.game.name %>
     </li>
     <br>
     <% end %>

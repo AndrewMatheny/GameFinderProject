@@ -1,7 +1,9 @@
+<div class="container text-center">
 <h2>Create Profile</h2>
 <%= form_for @user do |f| %>
-    Name : <%= f.text_field :name %><br>
+    User : <%= f.text_field :name %><br>
     Age : <%= f.number_field :age %><br>
     Bio : <%= f.text_area :bio %><br>
     <%= f.submit %>
 <% end %>
+</div>

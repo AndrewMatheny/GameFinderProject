@@ -1,3 +1,4 @@
+<div class="container text-center">
 <h2>Write A New Review</h2>
 <%= form_for @review do |f| %>
     User: <%= f.collection_select(:user_id, User.all, :id, :name) %><br><br>
@@ -7,3 +8,4 @@
     Review Text: <%= f.text_area :text %><br><br>
     <%= f.submit %>
 <% end %>
+</div>
