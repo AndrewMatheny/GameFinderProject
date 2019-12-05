@@ -22,11 +22,11 @@ class UsersController < ApplicationController
         redirect_to @user
     end
 
-    # def destroy
-    #     find_user
-    #     @user.destroy
-        
-    # end
+    def destroy
+        @user = find_user
+        @user.destroy
+        redirect_to '/welcome/index'
+    end
 
     private
 
@@ -37,4 +37,5 @@ class UsersController < ApplicationController
     def find_user
         @user = User.find(params[:id])
     end
+    
 end

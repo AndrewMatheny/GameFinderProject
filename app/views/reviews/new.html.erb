@@ -1,7 +1,8 @@
 <h2>Write A New Review</h2>
 <%= form_for @review do |f| %>
-    Game: <%= f.collection_select(:game_id, Game.all, :id, :name) %><br>
-    Score : <%= f.number_field :score %>/10<br>
-    Review Text: <%= f.text_area :text %><br>
+    User: <%= f.collection_select(:user_id, User.all, :id, :name) %><br><br>
+    Game: <%= f.collection_select(:game_id, Game.all, :id, :name) %><br><br>
+    Score : <%= f.number_field :score %> out of 10<br><br>
+    Review Text: <%= f.text_area :text %><br><br>
     <%= f.submit %>
 <% end %>

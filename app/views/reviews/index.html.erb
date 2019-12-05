@@ -1,0 +1,10 @@
+<h1>All Reviews</h1>
+
+<ul>
+<% @reviews.each do |review| %>
+    <li>
+        <%= link_to review.text, review %>
+    </li>
+    <br>
+    <% end %>
+</ul>

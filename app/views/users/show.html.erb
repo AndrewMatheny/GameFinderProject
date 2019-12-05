@@ -3,4 +3,6 @@
 <h3>Age: <%= @user.age%></h3>
 <h3><%= "#{@user.name}" %>'s Bio</h3>
 <p><%= @user.bio %></p>
+<%= button_to 'Delete', user_path(@user), method: :delete %>
 </div>
+
