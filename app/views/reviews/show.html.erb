@@ -1,3 +1,6 @@
-<h2><%= @game.name %></h2>
+<div class="container text-center">
+<h1><%= @game.name %></h1>
 <h2>Review: <%= @review.score %>/10<br>
+<h2>User: <%= @review.user.name %> </h2>
 <p>Text: <%= @review.text%></p>
+</div>
