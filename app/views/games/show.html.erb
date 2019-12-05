@@ -1,10 +1,15 @@
 <h1> <%= @game.name %> </h1>
 <h2> Developed by: <%= @game.developer %> </h2>
-<h3>Release date: <%= @game.release_date %> </h3>
+<h3>Release date: <%= @game.release_date %> </h3><br>
+
+<h3>Most Recent Reviews</h3><br>
 <ul>
 <% @reviews.each do |review| %>
     <li>
-        <%= link_to review.text, review %>
+        <%= link_to review.text, review %><br>
+        <%= review.score %>/10 <br>
+        Review made: <%= review.created_at %> <br>
+        User: <%= review.user.name %>
     </li>
     <br>
     <% end %>
