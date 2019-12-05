@@ -1,12 +1,16 @@
 class GamesController < ApplicationController
+    def index
+        @games = Game.all
+    end
     def show
         @game = Game.find(params[:id])
         @reviews = Review.where(:game_id => @game.id)
+        #@game_genre = GameGenre.where(:game_id => @game.id && :genre_id => )
     end
 
     def new
         @game = Game.new
-        @gamegenre = GameGenre.new(game_id: 1, genre_id: 1)
+        #@gamegenre = GameGenre.new(game_id: 1, genre_id: 1)
     end
 
     def create

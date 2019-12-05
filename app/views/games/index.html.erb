@@ -1,0 +1,13 @@
+<h1>List of Games in Database</h1>
+
+<h2>Don't see a game you want to review?
+    <%= link_to "Add it!", new_game_path %> </h2>
+
+<ul>
+    <% @games.each do |game| %>
+    <li>
+        <%= link_to game.name, game %>
+    </li>
+    
+    <% end %>
+</ul>
