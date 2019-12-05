@@ -4,6 +4,9 @@
     Developer : <%= f.text_field :developer %><br> 
     Release Date : <%= f.text_field :release_date %><br> 
     Game Genre <%= f.collection_check_boxes(:genre_ids, Genre.all, :id, :name) %><br>
+
+    If you don't see a genre that matches the game you can add one!
+    <%= link_to "Add a genre", new_genre_path%><br><br>
     
     <%= f.submit %>
 <% end %>

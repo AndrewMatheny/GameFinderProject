@@ -12,7 +12,7 @@ class GamesController < ApplicationController
         @game = Game.new(game_params)
         @game.save
         # ids = params[:game][:genre_ids]
-        # #sanitize ids before next step
+
         # clean_ids = ids.reject { |e| e.to_s.empty? }
         # clean_ids.each do |id|
         #     GameGenre.create(game_id: @game.id, genre_id: id)
