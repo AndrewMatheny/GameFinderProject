@@ -19,7 +19,10 @@
         <a href="/reviews/new">Create a Review</a>
         <a href="/games/new">Add a Game</a>
         <a href="/genres/new">Add a Genre</a>
-        <a href="/users/new">Create a Profile</a>
+        <div style="padding-left: 1270px;">
+        <a href="/users/<%= logged_in_user.id %>%">Profile</a>
+        <a href="/logout">Logout</a>
+        </div>
       <% else %>
         <a class="active" href="/welcome/index">GameFinder Pro</a>
         <a href="/users/new">Create a Profile</a>
