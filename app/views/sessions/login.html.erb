@@ -1,10 +1,11 @@
 <div class="container text-center">
     <%= flash[:message] %>
-    <%= form_for :auth do |f| %>
+    <%= form_for :auth do |f| %><br>
+
     <%= f.label :email %>
     <%= f.text_field :email %>
     <%= f.label :password %>
-    <%= f.password_field :password %><br>
+    <%= f.password_field :password %><br><br>
     <%= f.submit "Login" %>
     <% end %>
     <br>
