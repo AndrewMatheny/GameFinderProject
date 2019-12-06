@@ -5,4 +5,7 @@
 <h2>Review Score: <%= @review.score %>/10</h2><br>
 
 <p>Text: <%= @review.text%></p>
+
+<%= link_to 'Edit Review', edit_review_path(@review.id) %> <br><br>
+
 </div>

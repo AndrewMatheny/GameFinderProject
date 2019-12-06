@@ -5,6 +5,7 @@ class GamesController < ApplicationController
     def show
         @game = Game.find(params[:id])
         @reviews = Review.where(:game_id => @game.id)
+        @genres = @game.genres
         #@game_genre = GameGenre.where(:game_id => @game.id && :genre_id => )
     end
 

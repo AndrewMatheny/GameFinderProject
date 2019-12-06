@@ -2,6 +2,11 @@
 <h1> <%= @game.name %> </h1>
 <h2> Developed by: <%= @game.developer %> </h2>
 <h3>Release date: <%= @game.release_date %> </h3><br>
+<h3> Genre's - 
+    <% @genres.each do |genre| %>
+    |<%= genre.name %>|
+    <% end %>
+</h3>
 
 <h3>Most Recent Reviews</h3><br>
 <ul>
