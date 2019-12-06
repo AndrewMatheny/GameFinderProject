@@ -14,24 +14,26 @@
  @import "bootstrap";
 
  /* Add a black background color to the top navigation */
-.topnav {
+.navbar {
     //background-color: #333;
     background-color: #A5ACAF;
     overflow: hidden;
+    padding: 0px;
   }
   
   /* Style the links inside the navigation bar */
-  .topnav a {
+  .navbar a {
     float: left;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    //margin: 0px;
   }
   
   /* Change the color of links on hover */
-  .topnav a:hover {
+  .navbar a:hover {
     //background-color: #ddd;
     background-color: #66C010;
     color: black;
@@ -39,11 +41,12 @@
   }
   
   /* Add a color to the active/current link */
-  .topnav a.active {
+  .navbar a.active {
     //background-color: #4CAF50;
     background-color: #66C010;
     color: white;
   }
+
   body {
     color: #f2f2f2;
     background-color: #002145;
