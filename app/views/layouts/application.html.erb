@@ -12,6 +12,7 @@
 
   <body>
       <div class="topnav">
+      <% if logged_in? %>
         <a class="active" href="/welcome/index">GameFinder Pro</a>
         <a href="/games">All Games</a>
         <a href="/reviews">Reviews</a>
@@ -19,7 +20,11 @@
         <a href="/games/new">Add a Game</a>
         <a href="/genres/new">Add a Genre</a>
         <a href="/users/new">Create a Profile</a>
-      </div>
+      <% else %>
+        <a class="active" href="/welcome/index">GameFinder Pro</a>
+        <a href="/users/new">Create a Profile</a>
+        <% end %>
+        </div>
     <%= yield %>
   </body>
 </html>

@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    skip_before_action :redirect_user, only: [:new, :create]
     def show
         find_user
     end
@@ -39,7 +40,7 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:name, :age, :bio)
+        params.require(:user).permit(:name, :age, :bio, :email, :password, :password_confirmation)
     end
 
     def find_user
