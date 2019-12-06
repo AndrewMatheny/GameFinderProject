@@ -15,20 +15,20 @@
 
       <% if logged_in? %>
       <form class="form-inline">
-        <a class="active" href="/welcome/index">GameFinder Pro</a>
-        <a href="/games">All Games</a>
-        <a href="/reviews">Reviews</a>
-        <a href="/reviews/new">Create a Review</a>
-        <a href="/games/new">Add a Game</a>
-        <a href="/genres/new">Add a Genre</a>
+        <a class="navbar-brand" href="/welcome/index"><%= image_tag(asset_path('gamefinder.png'), size: '95x55')%></a>
+        <a class="nav-item" href="/games">All Games</a>
+        <a class="nav-item" href="/reviews">Reviews</a>
+        <a class="nav-item" href="/reviews/new">Create a Review</a>
+        <a class="nav-item" href="/games/new">Add a Game</a>
+        <a class="nav-item" href="/genres/new">Add a Genre</a>
         </form>
         <div class="topnav-nav d-flex flex-row">
-        <a href="/users/<%= logged_in_user.id %>%"><%= logged_in_user.name %></a>
-        <a href="/logout">Logout</a>
+        <a class="nav-item" href="/users/<%= logged_in_user.id %>%"><%= logged_in_user.name %></a>
+        <a class="nav-item" href="/logout">Logout</a>
         </div>
       <% else %>
-        <a class="active" href="/welcome/index">GameFinder Pro</a>
-        <a href="/users/new">Create a Profile</a>
+         <a class="navbar-brand" href="/welcome/index"><%= image_tag(asset_path('gamefinder.png'), size: '95x55')%></a>
+        <%#<a clas="nav-item" href="/users/new">Create a Profile</a>%>
         <% end %>
         </div>
     <%= yield %>
