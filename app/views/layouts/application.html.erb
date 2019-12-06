@@ -20,7 +20,7 @@
         <a href="/games/new">Add a Game</a>
         <a href="/genres/new">Add a Genre</a>
         <div style="padding-left: 1270px;">
-        <a href="/users/<%= logged_in_user.id %>%">Profile</a>
+        <a href="/users/<%= logged_in_user.id %>%"><%= logged_in_user.name %></a>
         <a href="/logout">Logout</a>
         </div>
       <% else %>
