@@ -9,8 +9,4 @@ class Game < ApplicationRecord
     validates :release_date, presence: true
     validates :name, uniqueness: true
 
-    # def find_genre
-        
-    # end
-
 end
